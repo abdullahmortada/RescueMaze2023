@@ -26,9 +26,8 @@ def runModel(img):
     predNums = np.argmax(preds, axis=-1)
     return predNums
 
-img = cv2.imread("/home/abdullah/Downloads/H2.jpg", cv2.IMREAD_GRAYSCALE)
-img = findLetters.findLetters(img)
-img = cv2.resize(img, (32, 32))
-img = cv2.transpose(img)
+if __name__ == "__main__":
+    img = cv2.imread("/home/abdullah/Downloads/H2.jpg", cv2.IMREAD_GRAYSCALE)
+    img = findLetters.findLetters(img)
 
-print(runModel(img))
+    print(runModel(img))
